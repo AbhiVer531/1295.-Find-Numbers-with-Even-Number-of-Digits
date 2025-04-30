@@ -1,0 +1,11 @@
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        count = 0
+        for num in nums:
+            evenOdd = 1
+            while num >= 10:
+                num = num // 10
+                evenOdd+=1
+            if evenOdd % 2 == 0:
+                count+=1
+        return count 
